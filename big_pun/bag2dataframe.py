@@ -5,7 +5,7 @@ import rosbag
 import numpy as np
 from cv_bridge import CvBridge
 
-from tracker_utils import q_to_R
+from .tracker_utils import q_to_R
 
 
 class Bag2Images:

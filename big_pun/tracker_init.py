@@ -1,8 +1,8 @@
 import yaml
-from dataset import Dataset
+from .dataset import Dataset
 import numpy as np
-from tracker_utils import backProjectFeatures, grid_sample, filter_first_tracks
-from tracks import Tracks
+from .tracker_utils import backProjectFeatures, grid_sample, filter_first_tracks
+from .tracks import Tracks
 import os
 
 

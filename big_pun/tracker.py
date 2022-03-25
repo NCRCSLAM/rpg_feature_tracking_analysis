@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from tracker_utils import projectLandmarks
+from .tracker_utils import projectLandmarks
 import tqdm
 
 
@@ -32,6 +32,7 @@ class Tracker:
 
         dataset = tracker_params["frame_dataset"]
         dataset.set_to_first_after(tracks_obj.t)
+        
 
         print("Tracking with KLT parameters: [window_size=%s num_pyramidal_layers=%s]" % (window_size, num_pyramidal_layers))
         for i, (t, img) in enumerate(tqdm.tqdm(dataset)):

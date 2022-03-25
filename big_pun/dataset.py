@@ -5,8 +5,8 @@ import yaml
 import numpy as np
 from os.path import join, isfile
 
-from tracker_utils import slerp, q_to_R, interpolate
-from bag2dataframe import Bag2Images, Bag2DepthMap, Bag2Trajectory, Bag2CameraInfo
+from .tracker_utils import slerp, q_to_R, interpolate
+from .bag2dataframe import Bag2Images, Bag2DepthMap, Bag2Trajectory, Bag2CameraInfo
 
 
 class Dataset:
@@ -133,3 +133,6 @@ class Dataset:
         else:
             self.it += 1
             return self[self.it-1]
+        
+    def __next__(self):
+        return self.next()
